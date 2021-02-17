@@ -1,0 +1,27 @@
+<nav class="navbar" >
+  <a href="">Localate</a>
+ 
+</nav>
+<nav class="navbar" >
+</nav>
+<nav class="navbar" id ="abc" >
+ <p>{{pro}}</p>
+ <button type ="button"  class="btn btn-info" id="aa" >Save Project</button>
+</nav>
+<nav class="navbar" >
+  <input type="text" id="aabc" placeholder="search">
+  <button type ="button" id="aa" class="btn btn-info" (click)="showJson()" >Import Json</button>
+  <button type ="button"  id ="aab" class="btn btn-info" >Export Json</button>
+ 
+</nav>
+
+
+
+<div *ngIf="show">
+<ul class="books">
+  <li *ngFor="let book of books">
+    <span class="badge">{{book.id}}</span> {{book.name}}
+  </li>
+</ul>
+
+

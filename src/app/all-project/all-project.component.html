@@ -1,0 +1,45 @@
+
+     <!-- <div *ngIf="front">
+          <app-root></app-root>
+     </div> -->
+
+    
+
+ <div *ngIf="ppro" >
+      <div *ngIf="ppro">
+     <!-- <nav class="navbar" >
+          <button type="button" id ="abc" class="btn btn-info" (click)="homePage()" >Home</button>  
+     </nav> -->
+<ul>
+    <li *ngFor="let project of proName; let i = index "> 
+         <div class="card bg-light"   style ="width:20rem">
+          <p>Project Name:  {{ project}}</p>
+           
+          <button type="button"  id="abcde" (click)="showDes(project)">Description</button>
+          <button type="button" id="abcd" (click)="delProject(project)">Delete</button>
+          <button type="button" id="abcd" (click)="showDetails()">Details</button>
+     </div>
+
+         
+    </li>
+  </ul>
+
+
+</div>
+</div>
+<div *ngIf="ppdes">
+<div *ngIf="disPage">
+<div class="card bg-light"   style ="width:20rem">
+     <div>Project Description :  </div>
+     <div>{{projectDis}}</div>
+     <button type="button" id="abcd" (click)="Allpro()">Back</button>
+</div>
+</div>
+</div>
+<div *ngIf="details">
+  <app-book [pro]="currentPro"></app-book>
+  
+
+</div>
+  
+

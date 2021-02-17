@@ -1,0 +1,43 @@
+.navbar {
+    overflow: hidden;
+    background-color: #aecdce;
+    
+  }
+  #abc
+{
+    margin-top: 12px;
+    margin-left: 1150px;
+
+}
+#xyz {
+  background-color: rgb(255,255,255);
+  color: rgb(0, 0,0);
+  font-size: 17px;
+  border:yellowgreen;
+   padding: 14px 16px; 
+}
+#abcd{
+  
+  margin-top: 12px;
+  margin-left: 115px;
+  background-color: rgb(255,255,255);
+  color: rgb(0, 0,0);
+  font-size: 17px;
+  border:yellowgreen;
+  /* padding: 14px 16px; */
+
+}
+
+#abcde{
+  
+  margin-top: 12px;
+  margin-left: 115px;
+  background-color: rgb(255,255,255);
+  color: rgb(0, 0,0);
+  font-size: 17px;
+  border:yellowgreen;
+  /* padding: 14px 16px; */
+
+}
+
+

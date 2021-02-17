@@ -1,0 +1,57 @@
+<body>
+<div *ngIf="frontPage">  
+<nav class="navbar" >
+    <a href="">Localate</a>
+   
+  </nav>
+  
+  <button type ="button" class="xyz" (click)="ViewAllProject()">Details</button>
+  <button type ="button" id ="abc" class="btn btn-info" (click)="AddProject()">Add Project</button>
+  
+  <h4 style="text-align: center;"> No Projects Found</h4>
+  <h6 style="text-align: center;">Create one by clicking New Project</h6>
+</div>
+<div *ngIf="add">
+  <div class="backdrop" [ngStyle]="{'display':display}"></div>
+  <div class="modal" id="#modal" tabindex="-1" role="dialog" [ngStyle]="{'display':display}" >
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+      <div class="modal-header">
+        <h2>New Project</h2>
+        <div class="popupCloseButton" (click)="OnCloseHandled()">X</div>
+      </div>
+      <div class="modal-body" >
+        <div class="container">
+          <div class="card">
+            <div class="card-body">
+
+              <form [formGroup]="projectForm">
+                <div class="form-group">
+                  <label>Project Name</label>
+                  <input type="text" class="form-control"  formControlName="projectName">
+                </div>
+                <div class="form-group">
+                  <label>Description</label>
+                  <input type="text" class="form-control" formControlName="description">
+                  <p *ngIf="projectForm.controls.description
+                  .errors" class="alert alert-danger">This field is required!</p>
+                </div>
+              </form>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" (click)="saveProject()" class="btn btn-info" [disabled]="!projectForm.valid">save</button>
+        <button type="button" data-dismiss="modal" (click)="OnCloseHandled()"  class="btn btn-info">cancel</button>
+      </div>
+      </div>
+    </div> 
+  </div> 
+</div>
+<div  *ngIf="view">
+  <app-all-project   [proName]="pNames"  [pro]="proAll" [proDes]="pDis"></app-all-project>
+</div>
+
+</body>
